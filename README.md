@@ -50,7 +50,7 @@ echo '
 ```
 
 Now apply the Daemonset from this repository to install crun-spin and the static spin cli on the nodes. Result should be that the test deployment changes to `running` state.
-The spin app is running on port `3009` if forwarded to localhost. You can access it at [localhost:3000/hello](http://localhost:3000/hello).
+The spin app is running on port `3000` if forwarded to localhost. You can access it at [localhost:3000/hello](http://localhost:3000/hello).
 
 ```
 oc apply -f daemonset.yaml

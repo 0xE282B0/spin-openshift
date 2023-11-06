@@ -54,4 +54,9 @@ The spin app is running on port `3000` if forwarded to localhost. You can access
 
 ```
 oc apply -f daemonset.yaml
+# wait a few seconds untill it is done and forward the port to your local host
+oc port-forward deployment/wasm-spin 3000:3000
+# if you are working on ROSA you can also expose the port to the public internet
+oc expose deployment wasm-spin --port 3000
+oc expose service/wasm-spin
 ```
